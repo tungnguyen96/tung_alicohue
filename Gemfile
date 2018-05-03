@@ -13,6 +13,17 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# Additional gems
+gem 'devise'
+gem 'formtastic'
+gem 'kaminari'
+gem 'inherited_resources'
+gem 'ransack'
+gem 'jquery-rails'
+gem 'bootstrap'
+gem 'paperclip'
+gem 'activeadmin'
+
 group :development do
   gem 'byebug'
   gem 'web-console', '>= 3.3.0'
