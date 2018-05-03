@@ -23,6 +23,7 @@ gem 'jquery-rails'
 gem 'bootstrap'
 gem 'paperclip'
 gem 'activeadmin'
+gem 'arctic_admin'
 
 group :development do
   gem 'byebug'
