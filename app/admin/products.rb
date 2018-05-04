@@ -3,7 +3,7 @@ ActiveAdmin.register Product do
 
   index do
     id_column
-    column :avatar { |product| image_tag(product.avatar.url(:thumb)) }
+    column :avatar { |product| image_tag(product.avatar.url(:thumb)) unless product.avatar.exists? }
     column :name
     column :sub_category
 

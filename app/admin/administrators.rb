@@ -5,7 +5,9 @@ ActiveAdmin.register Administrator do
 
   index do
     id_column
-    column :avatar { |admin| image_tag(admin.avatar.url(:thumb)) }
+    column :avatar do |admin|
+      image_tag(admin.avatar.url(:thumb)) unless admin.avatar.exist?
+    end
     column :email
     column :position
 
