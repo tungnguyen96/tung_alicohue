@@ -17,7 +17,7 @@ ActiveAdmin.register Product do
   form do |f|
     f.inputs do
       f.input :name
-      f.input :description
+      f.input :description, as: :quill_editor
       f.input :avatar
       f.input :sub_category, as: :select, collection: SubCategory.all.map{ |c| [c.title, c.id] }
     end

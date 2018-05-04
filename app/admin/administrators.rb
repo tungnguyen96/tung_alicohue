@@ -15,6 +15,11 @@ ActiveAdmin.register Administrator do
     f.inputs do
       f.input :email
       f.input :password, confirmation: true
+      f.input :phone
+      f.input :mobile
+      f.input :address
+      f.input :fax
+      f.input :position, as: :select, collection: ["giám đốc"]
       f.input :avatar, as: :file
     end
 

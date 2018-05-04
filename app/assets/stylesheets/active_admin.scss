@@ -9,8 +9,16 @@
 
 // Active Admin's got SASS!
 @import "active_admin/mixins";
-@import "arctic_admin/base"
+@import "arctic_admin/base";
+@import 'activeadmin/quill_editor_input';
 
+.quill_editor {
+  #product_description,
+  #company_info_intro {
+    padding-left: 255px;
+    padding-right: 10px;
+  }
+}
 // Overriding any non-variable SASS must be done after the fact.
 // For example, to change the default status-tag color:
 //

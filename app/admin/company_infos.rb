@@ -7,7 +7,6 @@ ActiveAdmin.register CompanyInfo do
     column :name
     column :website
     column :address
-    column :intro
 
     actions
   end
@@ -17,7 +16,7 @@ ActiveAdmin.register CompanyInfo do
       f.input :name
       f.input :website
       f.input :address
-      f.input :intro
+      f.input :intro, as: :quill_editor
     end
 
     f.actions
