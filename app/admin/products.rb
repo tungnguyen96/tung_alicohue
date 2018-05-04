@@ -3,7 +3,9 @@ ActiveAdmin.register Product do
 
   index do
     id_column
-    column :email
+    column :avatar
+    column :name
+    column :description
 
     actions
   end
@@ -16,6 +18,7 @@ ActiveAdmin.register Product do
     f.inputs do
       f.input :name
       f.input :description
+      f.input :avatar
       f.input :sub_category, as: :select, collection: SubCategory.all.map{ |c| [c.title, c.id] }
     end
 
