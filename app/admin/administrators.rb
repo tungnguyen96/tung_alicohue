@@ -1,12 +1,13 @@
 ActiveAdmin.register Administrator do
-  permit_params :email, :password
+  permit_params :email, :password, :avatar
   actions :all, except: :destroy
   config.filters = false
 
   index do
     id_column
-    column :avatar
+    column :avatar { |admin| image_tag(admin.avatar.url(:thumb)) }
     column :email
+    column :position
 
     actions
   end
@@ -14,7 +15,7 @@ ActiveAdmin.register Administrator do
   form do |f|
     f.inputs do
       f.input :email
-      f.input :password, confirmation: true
+      f.input :password, confirmation: true, required: false
       f.input :phone
       f.input :mobile
       f.input :address

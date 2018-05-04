@@ -1,11 +1,11 @@
 ActiveAdmin.register Product do
-  permit_params :name, :description, :sub_category_id
+  permit_params :name, :description, :avatar, :sub_category_id
 
   index do
     id_column
-    column :avatar
+    column :avatar { |product| image_tag(product.avatar.url(:thumb)) }
     column :name
-    column :description
+    column :sub_category
 
     actions
   end
@@ -18,7 +18,7 @@ ActiveAdmin.register Product do
     f.inputs do
       f.input :name
       f.input :description, as: :quill_editor
-      f.input :avatar
+      f.input :avatar, as: :file
       f.input :sub_category, as: :select, collection: SubCategory.all.map{ |c| [c.title, c.id] }
     end
 
