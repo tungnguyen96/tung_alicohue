@@ -1,0 +1,39 @@
+header
+  .banner
+    .jumbotron-fluid
+      .row
+        .logo.col-2
+          img(src="/logo.gif")
+        .content.col-10
+          h1.display-4 = @company.name
+          p.lead Chuyên cung cấp thiết bị & hệ thống: An Ninh - Chống Sét
+          br
+          p = @admin.address
+          p
+            | Tel: 
+            span = @admin.mobile
+            |  - Fax: 
+            span = @admin.fax
+  .navigator
+    ul.nav
+      - @links.each do |link, label|
+          li.nav-item
+          - if link.eql? :product
+            / level 1
+            .btn-group.dropdown
+              a.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") = label
+              .dropdown-menu
+                - @categories.each do |category|
+                  / level 2
+                  a.dropdown-item.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") = category.title
+                  .dropdown-menu
+                    - category.sub_categories.each do |sub|
+                      a.dropdown-item(href="/categories/#{sub.id}/products") = sub.title
+          - else
+            a.nav-link(href="/#{link.to_s}") = label
+      li.nav-item.separator.disabled
+      li.nav-item.separator.disabled
+      li.nav-item.separator.disabled
+      li.nav-item.separator.disabled
+      li.nav-item.auth
+        a.nav-link(href="/admin") Truy cập admin

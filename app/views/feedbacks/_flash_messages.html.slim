@@ -1,0 +1,8 @@
+- if flash[:success].present?
+  .alert.alert-success(role="alert")
+    p = flash[:success]
+
+- if flash[:error].present?
+  .alert.alert-danger(role="alert")
+    - flash[:error].each do |message|
+      li = message

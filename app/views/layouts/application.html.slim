@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title CÔNG TY TNHH ẤN LĨNH
+    = csrf_meta_tags
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload"
+    = javascript_include_tag "application", "data-turbolinks-track": "reload"
+  body
+    .wrapper
+      .container
+        = render "header"
+        = render "main"
+        = render "footer"

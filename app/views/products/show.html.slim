@@ -1,0 +1,20 @@
+.product__detail
+  .row
+    .col-5
+      .product__image.border.border-secondary
+        img(src="#{@product.avatar(:medium)}")
+    .col-7
+      p.name = @product.name
+  br
+  hr
+  .row
+    .product__detail
+      - if @product.description.present?
+        p.detail__title Mô tả chi tiết
+        p.detail__content = raw(@product.description)
+  hr
+  .category
+    h1 Các sản phẩm liên quan
+    .d-flex.flex-wrap
+      = render partial: "product", collection: @related_products, cached: true
+    br

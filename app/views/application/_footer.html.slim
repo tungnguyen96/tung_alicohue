@@ -1,0 +1,15 @@
+footer
+  hr
+  .jumbotron-fluild
+    p.company = @company.name
+    p.address Địa chỉ: #{@company.address}
+    p.contact-numbers
+      | Điện thoại: 
+      span.phone = @admin.phone
+      |  - Fax:
+      span.fax = @admin.fax
+    p.contact-address
+      | Email: 
+      span.email = @admin.email
+      |  - Website: 
+      span.website = @company.website

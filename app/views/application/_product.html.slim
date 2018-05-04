@@ -1,0 +1,5 @@
+.product
+  .product__image.border.border-secondary
+    = link_to product do
+      img(src=product.avatar.url(:thumb))
+  p.product__name = product.name

@@ -1,0 +1,28 @@
+.container
+  .row
+    .col-3
+      aside
+        ul.nav.flex-column
+          - @categories.each do |category|
+            .__categories
+              p.lead = category.title
+              hr.bold
+              - category.sub_categories.each do |sub|
+                a.nav-link(href="/categories/#{sub.id}/products") = sub.title
+                hr
+            br
+
+          .__contact
+            p.lead Thông tin liên hệ
+            hr.bold
+            img.rounded-circle.border.border-secondary(src="#{@admin.avatar.url(:thumb)}")
+            p.name Bà #{@admin.first_name} #{@admin.last_name}
+            p.info
+              span.position = @admin.position
+              |  - 
+              span.mobile = @admin.mobile
+            p.email 
+              | Email: 
+              a(href="mailto:#{@admin.email}" target="_top") = @admin.email
+    section.col-9
+      = yield

@@ -1,0 +1,6 @@
+.category
+  h1 = @category.title
+  hr.bold
+  .d-flex.flex-wrap
+    = render partial: "product", collection: @products, cached: true
+    br

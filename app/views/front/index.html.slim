@@ -1,0 +1,7 @@
+.home
+  - @categories.each do |category|
+    h1 = category.title
+    hr.bold
+    .d-flex.flex-wrap
+      = render partial: "product", collection: category.products.limit(15), cached: true
+    br

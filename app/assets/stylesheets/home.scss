@@ -1,0 +1,30 @@
+.home {
+  h1 {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 10px;
+  }
+
+  img {
+    width: 128px;
+    height: 128px;
+  }
+
+  .product {
+    width: 132px;
+    height: 168px;
+    margin: 12px;
+  }
+
+  .product__image {
+    width: 131px;
+    height: 131px;
+  }
+
+  .product__name {
+    font-size: 12.8px;
+    text-align: center;
+    margin: 8px;
+  }
+}

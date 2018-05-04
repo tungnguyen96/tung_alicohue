@@ -1,0 +1,58 @@
+.contact
+  h2 Thông tin liên hệ
+  hr.bold
+  .row
+    .col-5
+      img.avatar(src="#{@admin.avatar.url(:thumb)}")
+      .profile
+        p.name Bà #{ @admin.first_name } #{ @admin.last_name }
+        p Chức vụ: #{ @admin.position }
+        p Di động: #{ @admin.mobile }
+    .col-7
+      table.admin_info
+        tbody
+          tr 
+            td.heading Điện thoại:
+            td = @admin.phone
+          tr
+            td.heading Fax:
+            td = @admin.fax
+          tr
+            td.heading Email:
+            td = @admin.email
+          tr
+            td.heading Địa chỉ:
+            td = @admin.address
+  br
+  h2 Thông tin công ty
+  hr.bold
+  br
+  br
+  p.company_name = @company.name
+  .row
+    table.company_info
+      tbody
+        tr
+          td.heading Địa chỉ:
+          td = @company.address
+        tr
+          td.heading Điện thoại:
+          td = @admin.mobile
+        tr
+          td.heading Fax:
+          td = @admin.fax
+        tr
+          td.heading Email:
+          td
+            a(href="mailto:#{@admin.email}") = @admin.email
+        tr
+          td.heading Website:
+          td.website = @company.website
+        tr
+          td(colspan="2") = @company.address
+
+  br
+  h2 Bản đồ chỉ đường
+  img.map-image(src="/ban-do.jpg")
+  br
+  br

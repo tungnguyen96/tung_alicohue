@@ -1,0 +1,78 @@
+.contact {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+
+  h2 {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 10px;
+  }
+
+  .avatar {
+    width: 88px;
+    height: 100px;
+    float: left;
+    border: 1px solid grey;
+    margin: 5px;
+    margin-top: 20px;
+  }
+
+  .profile {
+    margin-top: 20px;
+    padding-left: 120px;
+
+    p.name {
+      text-transform: uppercase;
+      color: rgb(0, 102, 204);
+      font-size: 15px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  table.admin_info {
+    margin-top: 20px;
+    font-size: 12.8px;
+
+    td.heading {
+      width: 80px;
+      font-weight: 700;
+      color: rgb(136, 136, 136);
+    }
+  }
+
+  table.company_info {
+    margin-left: 15px;
+    font-size: 13px;
+
+    td.heading {
+      width: 90px;
+      font-weight: 700;
+      color: rgb(136, 136, 136);
+    }
+
+    td {
+      height: 30px;
+    }
+
+    td.website {
+      font-size: 16px;
+      color: rgb(0, 153, 51);
+    }
+  }
+
+  p.company_name {
+    font-size: 16px;
+    height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+  }
+
+  img.map-image {
+    width: 700px;
+    height: 510px;
+  }
+}

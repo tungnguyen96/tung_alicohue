@@ -1,0 +1,70 @@
+aside {
+  width: 200px;
+  background-color: #fff;
+}
+
+hr {
+  margin: 0;
+}
+
+p.lead {
+  padding: 5px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+// Categories blocks
+.__categories {
+  padding-top: 5px;
+
+  a.nav-link {
+    font-size: 12.8px;
+    color: black;
+  }
+
+  a.nav-link:hover{
+    text-decoration: underline;
+  }
+}
+
+// contact block
+.__contact {
+  font-size: 12.8px;
+
+  img {
+    width: 91px;
+    height: 91px;
+    margin-left: 40px;
+    margin-top: 10px;
+  }
+
+  p {
+    margin: 5px;
+  }
+
+  p.name {
+    padding-top: 10px;
+    padding-left: 25px;
+    text-transform: uppercase;
+    color: rgb(33, 148, 210);
+  }
+
+  p.info {
+    padding-left: 15px;
+
+    span.position {
+      text-transform: capitalize;
+    }
+    span.mobile {
+      color: rgb(33, 148, 210);
+    }
+  }
+
+  p.email {
+    font-size: 10px;
+    padding-left: 25px;
+  }
+}
