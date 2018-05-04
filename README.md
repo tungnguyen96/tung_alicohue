@@ -5,13 +5,15 @@ User: admin@example.com
 
 Password: password
 
+## Todo
+- add meta-data to admin
+- add editor to company_infos::intro, product::description
+- add avatar to admin, product
+- import data
+- write controller to export data
+- refactor views
+- add login button to view
+
 ### Config
-Title = ISD relearn
-Del Dashboard
-Del footer text
-Del filter: timestamp
-Filter category: title only
-Fitter subcate: only - title, category
-Filter feedback: delete feedback
-Xoa comment table
-Enable preview
+Log out redirect toi "/"
+Them nut dang nhap o navigation
