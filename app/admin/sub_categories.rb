@@ -4,7 +4,6 @@ ActiveAdmin.register SubCategory do
   index do
     id_column
     column :title
-    column :catetgory
 
     actions
   end
