@@ -26,6 +26,12 @@ gem 'paperclip'
 gem 'activeadmin'
 gem 'arctic_admin'
 
+# Viewer gems
+gem 'jquery-rails'
+gem 'bootstrap'
+gem 'slim'
+gem 'slim-rails'
+
 group :development do
   gem 'byebug'
   gem 'web-console', '>= 3.3.0'
