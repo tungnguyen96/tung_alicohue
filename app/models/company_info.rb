@@ -6,5 +6,6 @@ class CompanyInfo < ApplicationRecord
   validates :address, presence: true
   validates :website, presence: true
   validates :intro, presence: true
-  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/  
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/ 
+  validates :avatar, attachment_presence: true 
 end

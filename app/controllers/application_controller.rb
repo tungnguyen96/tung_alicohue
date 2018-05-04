@@ -27,6 +27,7 @@ class ApplicationController < ActionController::Base
   def load_company_info
     @company ||= CompanyInfo.first
   end
+
   # Overwriting the sign_out redirect path method
   def after_sign_out_path_for(resource_or_scope)
     root_path

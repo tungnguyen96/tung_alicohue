@@ -5,7 +5,7 @@ ActiveAdmin.register Administrator do
 
   index do
     id_column
-    column :avatar { |admin| image_tag(admin.avatar.url(:thumb), {width: "20px", height: "20px"}) unless admin.avatar.exists? }
+    column :avatar { |admin| image_tag(admin.avatar.url(:thumb)) }
     column :email
     column :position
 
@@ -21,7 +21,7 @@ ActiveAdmin.register Administrator do
       f.input :address
       f.input :fax
       f.input :position, as: :select, collection: ["giám đốc"]
-      f.input :avatar, as: :file
+      f.input :avatar, as: :file, hint: image_tag(f.object.avatar.url(:thumb))
     end
 
     f.actions

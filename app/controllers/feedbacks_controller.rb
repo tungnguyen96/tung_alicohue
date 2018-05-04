@@ -6,10 +6,10 @@ class FeedbacksController < ApplicationController
   def create
     @feedback = Feedback.new feedback_params
     if @feedback.save
-      flash[:success] = "Đã gửi phản hồi của quý khách thành công, xin cảm ơn!"
+      flash[:success] = "Cảm ơn quý khách đã đóng ghóp ý kiến"
       redirect_to new_feedback_path
     else
-      flash.now[:error] = @feedback.errors.full_messages
+      flash.now[:error] = "Xin hãy điền đủ cả email và nội dung"
       render :new
     end
   end

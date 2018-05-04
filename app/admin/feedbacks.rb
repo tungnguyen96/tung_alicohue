@@ -6,7 +6,7 @@ ActiveAdmin.register Feedback do
     id_column
     column :email
     column :content
-
+    column :created_at
     actions
   end
 

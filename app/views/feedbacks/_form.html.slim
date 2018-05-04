@@ -1,12 +1,10 @@
-= form_for(@feedback) do |f|
+h4 Xin vui lòng đóng ghóp ý kiến cho chúng tôi 
+= form_for @feedback do |f|
 
-  .form-group
-    = f.label :email, "Email: "
-    = f.email_field :email, class: "form-control"
+  = f.label :email, "Email: "
+  = f.email_field :email
+  br
+  = f.label :content, "Nội dung: "
+  = f.text_area :content
 
-  .form-group
-    = f.label :content, "Nội dung: "
-    = f.text_area :content, class: "form-control"
-
-  .form-group
-    = f.submit "Gửi phản hồi"
+  = f.submit "Gửi phản hồi"

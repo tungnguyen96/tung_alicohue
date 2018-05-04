@@ -3,7 +3,7 @@ ActiveAdmin.register Product do
 
   index do
     id_column
-    column :avatar { |product| image_tag(product.avatar.url(:thumb)) unless product.avatar.exists? }
+    column :avatar { |product| image_tag(product.avatar.url(:thumb)) }
     column :name
     column :sub_category
 
@@ -14,11 +14,12 @@ ActiveAdmin.register Product do
   filter :sub_category
   filter :category
 
+
   form do |f|
     f.inputs do
       f.input :name
       f.input :description, as: :quill_editor
-      f.input :avatar, as: :file
+      f.input :avatar, as: :file, hint: image_tag(f.object.avatar.url(:thumb))
       f.input :sub_category, as: :select, collection: SubCategory.all.map{ |c| [c.title, c.id] }
     end
 
